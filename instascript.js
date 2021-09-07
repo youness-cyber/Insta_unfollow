@@ -94,8 +94,8 @@ if (confirm("do you want to remove them? ")) {
     followingName = following.innerText;
 
     if (followersName.indexOf(followingName) < 0 && count != 0) {
-      following.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0].click();
-
+      highParent=following.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0];
+      highParent.click()
       await new Promise((r) => setTimeout(r, 1500));
 
       unfollow = document.querySelector(".aOOlW.-Cab_   ");
