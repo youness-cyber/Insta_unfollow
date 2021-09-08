@@ -1,49 +1,4 @@
 
-
-//START HERE 
-//** Find the account who didn't Follow you back section */
-
-// for scrrolling
-div=null
-
-//  GET the Followers data
-await btnsClick(0)
-//await sleep(500);
-FS1 = document.querySelector(".isgrP");
-FS1.parentElement.style.opacity=1
-creatingDiv()
-console.log("starting")
-await scrolling(FS1);
-console.log("getting the folowers......");
-[followers , followersName] = getAccounts();
-console.log("done..");
-// quit button sections
-await btnsClick(2)
-
-
-//***END  of the  followers section */
-//await sleep(500);
-console.log("getting the followings......")
-
-//***Getting the  Following data   */
-await btnsClick(1)
-
-//await sleep(1500);
-
-FS2 = document.querySelector(".isgrP");
-
-// the scrolling  for the followings
-await scrolling(FS2);
-[followings , followingsName] = getAccounts();
-console.log("done");
-console.log("filttring")
-//**END of retrieving the following data */
-
-// Display the account who didn't follow you
-removefollowers(followings,followersName)
- div.remove()
-console.log("done")
-
 //** function part */
 function creatingDiv(){body=document.body
   div=document.createElement("div")
@@ -96,6 +51,51 @@ for (following of followings) {
 }
 h1.innerText = "Account who didn't follow you back !";
 }
+//START HERE 
+//** Find the account who didn't Follow you back section */
+
+// for scrrolling
+div=null
+
+//  GET the Followers data
+await btnsClick(0)
+//await sleep(500);
+FS1 = document.querySelector(".isgrP");
+FS1.parentElement.style.opacity=1
+creatingDiv()
+console.log("starting")
+await scrolling(FS1);
+console.log("getting the folowers......");
+[followers , followersName] = getAccounts();
+console.log("done..");
+// quit button sections
+await btnsClick(2)
+
+
+//***END  of the  followers section */
+//await sleep(500);
+console.log("getting the followings......")
+
+//***Getting the  Following data   */
+await btnsClick(1)
+
+//await sleep(1500);
+
+FS2 = document.querySelector(".isgrP");
+
+// the scrolling  for the followings
+await scrolling(FS2);
+[followings , followingsName] = getAccounts();
+console.log("done");
+console.log("filttring")
+//**END of retrieving the following data */
+
+// Display the account who didn't follow you
+removefollowers(followings,followersName)
+ div.remove()
+console.log("done")
+
+
 // THE END of Display the account who didn't follow you
 //await sleep(1000);
 
