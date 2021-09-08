@@ -28,7 +28,7 @@ do  {count=4
   bool=arr.every((v)=>!!v==false)
    arr=[]
 }while(!bool);
-
+console.log("getting the folowers......")
 await new Promise((r) => setTimeout(r, 1500));
 
 followers = Array.from(
@@ -38,6 +38,7 @@ followers = Array.from(
 followersName = Array.from(
   document.querySelectorAll("a.FPmhX.notranslate._0imsa ")
 ).map((v) => v.innerText);
+console.log("done..")
 
 await new Promise((r) => setTimeout(r, 500));
 
@@ -48,7 +49,8 @@ quitbtn.click();
 
 //***END  of the  followers section */
 
-await new Promise((r) => setTimeout(r, 1500));
+await new Promise((r) => setTimeout(r, 1000));
+console.log("getting the followings......")
 
 //***Getting the  Following data   */
 followingsbtn = document.querySelectorAll("a.-nal3 ")[1];
@@ -67,6 +69,7 @@ do  {count=4
                  await new Promise((r)=>setTimeout(r,60));count--}
 //then testing  all those 4 elemnt if they are all null  we stop 
   bool=arr.every((v)=>!!v==false)
+     arr=[]
 }while(!bool);
 
 followings = Array.from(
@@ -75,7 +78,8 @@ followings = Array.from(
 followingsName = Array.from(
   document.querySelectorAll("a.FPmhX.notranslate._0imsa ")
 ).map((v) => v.innerText);
-
+console.log("done")
+console.log("filttring")
 await new Promise((r) => setTimeout(r, 1000));
 
 //**END of retrieving the following data */
@@ -89,7 +93,7 @@ for (following of followings) {
   }
 }
 h1.innerText = "Account who didn't follow you back !";
-
+console.log("done")
 // THE END of Display the account who didn't follow you
 
 await new Promise((r) => setTimeout(r, 1500));
