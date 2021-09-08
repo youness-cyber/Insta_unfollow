@@ -103,7 +103,7 @@ console.log("done")
 
 //*****Unfollow action  */
 //** THIS PART STILL WORKING ON IT  */
-/*
+
 if (confirm("do you want to remove them? ")) {
   await new Promise((r) => setTimeout(r, 1500));
 
@@ -113,8 +113,8 @@ if (confirm("do you want to remove them? ")) {
     followingName = following.innerText;
 
     if (followersName.indexOf(followingName) < 0 && count != 0) {
-      highParent=following.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0];
-      highParent.click()
+      followingBtn=following.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0];
+      followingBtn.click()
       await new Promise((r) => setTimeout(r, 1500));
 
       unfollow = document.querySelector(".aOOlW.-Cab_   ");
@@ -124,6 +124,6 @@ if (confirm("do you want to remove them? ")) {
       count--;
     }
   }
-  location.reload();
+ 
 }
-*/
+
