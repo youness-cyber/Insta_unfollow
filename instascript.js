@@ -1,5 +1,5 @@
 // for scrrolling
-
+arr=[]
 //** Find the account who didn't Follow you back section */
 
 //  GET the Followers data
@@ -26,6 +26,7 @@ do  {count=4
                  await new Promise((r)=>setTimeout(r,60));count--}
 //then testing  all those 4 elemnt if they are all null  we stop 
   bool=arr.every((v)=>!!v==false)
+   arr=[]
 }while(!bool);
 
 await new Promise((r) => setTimeout(r, 1500));
