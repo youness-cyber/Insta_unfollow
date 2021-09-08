@@ -1,5 +1,5 @@
 // for scrrolling
-iteration = 50;
+
 //** Find the account who didn't Follow you back section */
 
 //  GET the Followers data
