@@ -6,9 +6,9 @@ arr=[]
 followersbtn = document.querySelectorAll("a.-nal3 ")[0];
 followersbtn.click();
 
-await new Promise((r) => setTimeout(r, 3000));
-
+await new Promise((r) => setTimeout(r, 100));
 FS1 = document.querySelector(".isgrP");
+FS1.parentElement.style.opacity=0
 /*
 count = iteration;
 while (count != 0) {
@@ -17,16 +17,20 @@ while (count != 0) {
   count--;
   console.log(count);
 }*/
-
-do  {count=4
+console.log("starting")
+await new Promise((r) => setTimeout(r, 2000));
+note=10
+do  {count=4;
   FS1.scrollTop += FS1.scrollHeight;
- //  we capturing  the same element(the refresh icon) 4 times in time series  of 60 millesecond  
+ //  we capturing  the same element(the refresh icon) 4 times in time series  of 60 millesecond
  //this because the system is fast  , MAYBE there is better way
  while(count){  arr.push(document.querySelector(".By4nA")) 
                  await new Promise((r)=>setTimeout(r,60));count--}
-//then testing  all those 4 elemnt if they are all null  we stop 
+//then testing  all those 4 elemnt if they are all null  we stop
   bool=arr.every((v)=>!!v==false)
-   arr=[]
+   arr=[];
+ if(!note){console.log("fetching....");note=10}
+   note--;
 }while(!bool);
 console.log("getting the folowers......")
 await new Promise((r) => setTimeout(r, 1500));
@@ -61,15 +65,18 @@ await new Promise((r) => setTimeout(r, 1500));
 FS2 = document.querySelector(".isgrP");
 
 // the scrolling  for the followings
-do  {count=4
+note=10;
+do  {count=4;
   FS2.scrollTop += FS2.scrollHeight;
- //  we capturing  the same element(the refresh icon) 4 times in time series  of 60 millesecond  
+ //  we capturing  the same element(the refresh icon) 4 times in time series  of 60 millesecond
  //this because the system is fast  , MAYBE there is better way
  while(count){  arr.push(document.querySelector(".By4nA")) 
                  await new Promise((r)=>setTimeout(r,60));count--}
-//then testing  all those 4 elemnt if they are all null  we stop 
+//then testing  all those 4 elemnt if they are all null  we stop
   bool=arr.every((v)=>!!v==false)
-     arr=[]
+     arr=[];
+   if(!note){console.log("fetching....");note=10}
+   note--;
 }while(!bool);
 
 followings = Array.from(
